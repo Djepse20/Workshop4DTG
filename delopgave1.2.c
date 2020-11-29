@@ -30,8 +30,8 @@ int is2mod5(int x){
         ans =((ans*(mult)))%5;
 
     }
-    ans = ((ans*mult)-3)%5;
-    printf("%d",ans);
+    ans = ((ans*mult)-2)%5;
+
 
     return (ans==2); 
 }
