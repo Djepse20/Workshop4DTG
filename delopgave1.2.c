@@ -14,7 +14,7 @@ int isPrime(int x){
 
 /* Denne funktion skal returnere 1 hvis gcd(x,2)=1 og 0 ellers */
 int isGcd1(int x){
-return ((x%2)); /*hvis x modulo 2 ikke er nul vil gcd være 1, da at gcd mellem 2 tal ikke kan være større end det laveste af de to tal (sjovt nok), hvilket her gør der kun er 2 mulighder at vælge imellem :)
+return ((x%2)); /*hvis x modulo 2 ikke er nul vil gcd være 1, da at gcd mellem 2 tal ikke kan være større end det laveste af de to tal :)
 */
 }
 
@@ -61,4 +61,4 @@ int main(void){
   }
 
   return EXIT_SUCCESS;
-}
+}s
