@@ -18,19 +18,21 @@ return ((x%2)==1);
 }
 
 /* Denne funktion skal returnere 1 hvis 9^x-2 mod 5 = 2 og 0 ellers */ 
-/* tror han mener 9^x og så trækker man 2 fra og siger modulo 5 da at ellers får man aldrig 2 :)*/
 /* har tjekket med lommeregner at metoden herunder giver det ønskede resultat bare rolig :D*/
 int is2mod5(int x){
-   unsigned int ans = (9%5)-2;
+   unsigned int ans = (9-2)%5;
     unsigned int mul = ans; 
-  
-    // now multiply ans by b-1 times and take 
-    // mod with m 
-    for (unsigned int i=1; i<x; i++) 
-        ans = ((ans*mul)-2)%5; 
-    
 
-    return (ans == 2); 
+
+    for (unsigned int i=1; i<x; i++) 
+    {
+ 
+        ans =(((ans-2)*mul)-2)%5; /* ærligt nul ide hvorfor det her virker men det gør det og det giver korrekt resultat så livet er nemt */
+
+    }
+
+
+    return (ans==2); 
 }
 
 
@@ -45,7 +47,7 @@ int main(void){
   q = isGcd1(x);
   r = is2mod5(x);
   
-  printf("%d,%d,%d",p,q,r);
+
   
 
 
