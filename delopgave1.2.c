@@ -20,17 +20,18 @@ return ((x%2)==1);
 /* Denne funktion skal returnere 1 hvis 9^x-2 mod 5 = 2 og 0 ellers */ 
 /* har tjekket med lommeregner at metoden herunder giver det ønskede resultat bare rolig :D*/
 int is2mod5(int x){
-   unsigned int ans = (9-2)%5;
-    unsigned int mul = ans; 
+  unsigned int ans = 1;
+  unsigned int mult = 9;
 
 
-    for (unsigned int i=1; i<x; i++) 
+    for (unsigned int i=0; i<x-1; i++) 
     {
  
-        ans =(((ans-2)*mul)-2)%5; /* ærligt nul ide hvorfor det her virker men det gør det og det giver korrekt resultat så livet er nemt */
+        ans =((ans*(mult)))%5;
 
     }
-
+    ans = ((ans*mult)-3)%5;
+    printf("%d",ans);
 
     return (ans==2); 
 }
